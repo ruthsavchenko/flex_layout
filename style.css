@@ -1,63 +1,86 @@
 .box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
 }
 
 .box > div {
     height: 300px;
     min-width: 300px;
-    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100px;
+    text-align: center;
 } 
 
-@media (min-width: 925px) {
-    .box > div:nth-child(4) {
-        order: 2;
-    }
-    
-    .box > div:nth-child(5) {
-        order: 1;
-    } 
+.cell1 {
+    background-color: red;
 }
 
-@media (min-width: 450px) and (max-width: 924px) {
-    .box > div:nth-child(3) {
-        order: 2;
-    }
-    
-    .box > div:nth-child(4) {
-        order: 1;
-    }  
-    .box > div:nth-child(5) {
-        order: 3;
-    }
-    
-    .box > div:nth-child(6) {
-        order: 4;
-    }  
+.cell2 {
+    background-color:rgb(201, 0, 0);
 }
 
-@media (max-width: 450px) {
-    .box > div:nth-child(3) {
-        order: 1;
+.cell3 {
+    background-color:rgb(155, 0, 0);
+}
+
+.cell4 {
+    background-color:rgb(107, 0, 0);
+}
+
+.cell5 {
+    background-color:rgb(63, 0, 0);
+}
+
+.cell6 {
+    background-color:rgb(0, 0, 0);
+}
+
+@media (min-width: 1050px) {
+    .box {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
-    
-    .box > div:nth-child(4) {
-        order: 2;
-    } 
-    .box > div:nth-child(5) {
-        order: 3;
+
+    .cell4 {
+        grid-row: 2; 
+        grid-column: 3; 
     }
-    
-    .box > div:nth-child(6) {
-        order: 4;
-    } 
+
+    .cell6 {
+        grid-row: 2; 
+        grid-column: 1; 
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1049px) {
+    .box {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .cell3 {
+        grid-row: 2; 
+        grid-column: 2; 
+    }
+}
+
+@media (min-width: 450px) and (max-width: 749px) {
+    .box {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 
